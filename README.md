@@ -1,21 +1,13 @@
-
----
-
-# 2) bella cactus website README (same style, no emoji headings)
-
-```md
 <div align="center">
 
-# 🖤 bella cactus (github pages)
+# <3 bella limiter (d2 net limiter)
 
-terminal-core personal website.  
-black/white/pink by default, optional red “evil” palette.
+a lightweight **windows network limiter / profile toggler** built for fast switching between network states.
+mainly used as a personal **destiny 2 (pve)** qol tool + general connection testing / troubleshooting.
 
-**static-only** (github pages), **no backend**, just **html/css/js**.
-
-![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-live-ff78c8?style=for-the-badge)
-![Static](https://img.shields.io/badge/Static--Only-no%20backend-0b0b0b?style=for-the-badge)
-![HTML/CSS/JS](https://img.shields.io/badge/Stack-HTML%20%2F%20CSS%20%2F%20JS-ff4db8?style=for-the-badge)
+![Windows](https://img.shields.io/badge/Platform-Windows-0b0b0b?style=for-the-badge)
+![Utility](https://img.shields.io/badge/Type-network%20utility-ff78c8?style=for-the-badge)
+![Profiles](https://img.shields.io/badge/Mode-quick%20presets-ff4db8?style=for-the-badge)
 
 </div>
 
@@ -23,120 +15,105 @@ black/white/pink by default, optional red “evil” palette.
 
 ## what is this?
 
-**bella cactus** is my personal terminal-themed website playground.  
-it’s meant to feel like a fake OS / interactive terminal hub rather than a normal portfolio.
+**bella limiter** is a small desktop tool that helps manage network behavior through simple, toggleable profiles.
 
-this repo is basically:
-- mini tools
-- experiments
-- weird pages
-- secrets / easter eggs
-- “why did i add this” moments
+it exists for two main reasons:
 
----
+- **destiny 2 workflow convenience (pve)**  
+  quick switching between preset network states without digging through settings every time
 
-## vibe
+- **general network testing**
+  stability checks, troubleshooting, and repeatable “known good” configurations
 
-- fake-os / terminal playground aesthetic
-- black / white / pink palette
-- optional red mode (evil palette)
-- meant to be explored, not skimmed
-- subtle motion > loud motion
+this repo is kept as a record of the project, its features, and how it evolved.
 
 ---
 
 ## highlights
 
-- **intro gate**: auto-playing video if the browser allows it (otherwise click once)
-- **music bar + waveform**: random track picker + waveform line
-- **terminal script**: types little commands and responses
-- **sticker wall**: random image stickers behind the UI
-- **command palette**: quick actions + navigation
-- **easter eggs**: oneko, secrets, and assorted nonsense
+- fast enable/disable toggles
+- preset profiles for repeatable setups
+- minimal UI designed for quick use while a game/app is running
+- focused on qol over complexity
 
 ---
 
-## pages
+## intended use
 
-main pages that match the “site world” vibe:
+this tool is meant for:
 
-- `index.html` : main hub (terminal + music + stickers + palette)
-- `limiter.html` : bella limiter page
-- `os.html` : fake cli / fake os page
-- `ascii.html` : ascii zoo
-- `idle.html` : screensaver-style page (leave it open)
-- `glitch.html` : glitch / corruption playground
-- `dreams.html` : surreal dream log
+- connection testing / troubleshooting
+- traffic shaping for stability checks
+- quickly switching between personal network presets
+- general “one click” qol network management
 
-extra mini-tools / experiments:
-
-- `encrypter.html`
-- `ascii-art-maker-type-shit.html`
-- `keyb.html`
-- `snkaegame.html`
-- `dungeoncrawler.html`
-- `shitty-ass-gamez-3d.html`
-- `controllar-test.html`
-- `boucnignlolgo.html`
-- `sigmaness-basiclaly-epic.html`
-- `legacy-home.html`
-- `shrines.html`
-- `vault.html`
+important note:
+- use responsibly and follow the rules of any online service/game you use it with  
+- this tool is not affiliated with bungie or destiny 2
 
 ---
 
-## controls (good to know)
+## features
 
-### index.html
+depending on the build/version, this project may include:
 
-- **ctrl+k** (or **/**) opens the command palette
-- **esc** closes palette / overlays
-
-the palette understands stuff like:
-- `open dreams`, `open idle`, `open glitch`
-- `theme pink` / `theme white` / `theme red`
-
-### idle.html screensaver
-
-- **space**: pause/resume
-- **r**: reroll sprites/text
-- **t**: cycle theme
-- **esc**: back to `index.html`
+- **profiles**
+  - saved preset configurations for quick switching
+- **quick toggles**
+  - enable/disable limiter behavior instantly
+- **status display**
+  - shows the active profile/state so you don’t forget what’s on
+- **qol controls**
+  - minimal clicks, minimal friction, built for real use
 
 ---
 
-## customization
+## requirements
 
-### change the soundtrack
-
-the music list lives in `index.html` (search for `const tracks = [`)
-
-- drop `.mp3` files in the repo root (same folder as `index.html`)
-- add them to the tracks list
-- keep filenames exact (spaces + punctuation matter)
-
-### change stickers
-
-the sticker filenames are also listed in `index.html` (search `stickerFiles`)
-
-- add images (`.png/.jpg/.gif`) to the repo root
-- update the list
-
-### theme persistence
-
-theme is saved in `localStorage` under:
-
-- `bella_theme` (values: `pink`, `white`, `red`)
+- windows 10/11
+- .net runtime (if applicable for your build)
+- admin permissions may be required depending on how networking is applied
 
 ---
 
-## run locally
+## how to run
 
-quick and dirty:
-- double-click `index.html` and it will mostly work
+### option A: run a release build
+1. download/build the app
+2. run the exe
+3. use the toggles/profiles as needed
 
-recommended (avoids some browser weirdness with media):
+### option B: run from source
+1. open the solution/project in visual studio
+2. build + run
 
-```bash
-# from the repo folder
-python -m http.server 8000
+---
+
+## safety notes
+
+- always keep a way to return to your normal/default network state
+- don’t leave profiles active accidentally
+- if something feels unstable, reset and restart the game/app
+
+---
+
+## roadmap / ideas
+
+- clearer profile names + descriptions
+- a safe "reset to default" button
+- better UI feedback for current active state
+- export/import presets
+- small log of recent profile switches (optional)
+
+---
+
+## credits
+
+made by **bella**
+
+---
+
+## license
+
+no license is required if this repo is just a personal archive/record.
+(if you ever want others to reuse code, MIT is the simplest.)
